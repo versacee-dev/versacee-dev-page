@@ -4,10 +4,6 @@ session_start();
 	include("connect.php");
 
 
-// Enable FULL Error Reporting on the screen
-// ONLY USE IN DEVELOPMENT
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 //Check server connection
 if ($con->connect_error){
@@ -19,7 +15,6 @@ if ($con->connect_error){
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-	//receive  values from task form
 
 	$tname=$_POST['tname'];
     $Aname=$_POST['Aname'];
@@ -61,7 +56,7 @@ $con->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task creation</title>
+    <title>rate and review</title>
 
 
 </head>
