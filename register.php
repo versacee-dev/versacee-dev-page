@@ -4,11 +4,6 @@ session_start();
 	include("connect.php");
 
 
-// Enable FULL Error Reporting on the screen
-// ONLY USE IN DEVELOPMENT
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 //Check server connection
 if ($con->connect_error){
 	die ("Connection failed:". $con->connect_error);
@@ -19,7 +14,6 @@ if ($con->connect_error){
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-	//receive  values from user form and trim white spaces
 
 	$fname=trim($_POST['fname']);
 	$jobdes=trim($_POST['jobdes']);
@@ -29,8 +23,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		if(!empty($fname) && !empty($jobdes) && !empty($email) && !empty($fpassword) && ($fpassword)>3 && !is_numeric($fname))
 		{
 
-			//save to database
-			//now insert the received values into database using defined variables
 			$query ="INSERT INTO users(fname,jobdes,email,fpassword) VALUES ('$fname','$jobdes','$email','$fpassword')";
 			mysqli_query($con, $query);
 		}else
@@ -41,7 +33,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-	//receive  values from user form and trim white spaces
 
 	$fname=trim($_POST['fname']);
 	$jobdes=trim($_POST['jobdes']);
@@ -52,8 +43,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		if(!empty($fname) && !empty($jobdes) && !empty($email) && !empty($fpassword) && ($fpassword)>3 && !is_numeric($fname))
 		{
 
-			//save to database
-			//now insert the received values into database using defined variables
 			$sqli ="CREATE TABLE IF NOT EXISTS $fname (`task_id` PRIMARY KEY SERIAL FOREIGN KEY NOT NULL,`tname` text NOT NULL,`tstatus` text NOT NULL,`comments` text NOT NULL,`review` text NOT NULL,`rating` DECIMAL UNSIGNED NULL DEFAULT NULL)";
 			
 		}
