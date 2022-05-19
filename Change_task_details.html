@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task creation</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="new_task.css">
+
+</head>
+<body>
+    <div class="page">
+
+    <section class="header">
+		<nav>
+			<a href="index.html"><img src="Hospital logo pic.jpg" width="130" height="110"></a>
+			<div class="nav_links">
+				<ul>
+					
+					<li> <a href ="index.html"> Home </a> </li>
+					<li> <a href ="Management.html">Management page</a> </li>
+					
+				</ul>
+			</div>
+		</nav>
+
+        
+
+	  </section>
+
+     <section class="c-form">
+            <form method="post" action ="change_task_details.php">
+
+                <div class="form_title">
+                <h1>Choose what you want to change:</h1>
+                </div>
+
+                <div class="input-box">
+                <label for="choice">What do you want to change:</label><br>
+
+                <select name="choice" id="choice">
+                <option value="Assigned to">Assigned to</option>
+                <option value="Due by">Due before</option>
+                <option value="both">both</option>
+                </select>
+                </div>
+
+                <div class="form_title">
+                    <h1>Fill the name of the task and the information you want to change below:</h1>
+                </div>
+
+                <div class="input-box">
+                <label for="tname">Task name:</label><br>
+                <input type="text" class="input-box" id="tname" name="tname" required><br>
+                </div>
+
+                <div class="input-box">
+                <label for="Aname">Assigned to:</label><br>
+                <input type="text" class="input-box" id="Aname" name="Aname" placeholder="Enter to change who the task is assigned to"><br>
+                </div>
+
+                <div class="input-box">
+                    <label for="datepick">Due before:</label><br>
+                    <input type="date" class="input-box" id="datepick" name="datepick"><br>
+                    </div>
+
+               
+
+                <input type="submit" value="Submit">
+        </form>
+     </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/registartion</title>
+
+    <link type="text/css" rel="stylesheet" href="login.css">
+
+
+</head>
+<body>
+
+
+        <div class="nav_links">
+            <ul>
+
+                <li> <a href ="index.html"> Home </a> </li>
+            </ul>
+        </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form action="login.php" method="post">
+                        <input type="email" class="input-box" id="email" name="email" placeholder="Your email address" required> 
+                        <input type="password" class="input-box" id="fpassword" name="fpassword" placeholder="password" required> 
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"> <span>Remember me</span>
+                    </form>
+
+                    <button type="button" class="btn" onclick="openregister()">Register</button>
+                    <a href="Password.html">Forgot password</a>
+
+                </div>
+                <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form action="register.php" method="post">
+                        <input type="text" class="input-box" id="fname" name="fname" placeholder="Your name" required> 
+                        <input type="text" class="input-box" id="jobdes" name="jobdes" placeholder="Job description" required> 
+                        <input type="email" class="input-box" id="email" name="email" placeholder="Your email address" required> 
+                        <input type="password" class="input-box" id="fpassword" name="fpassword" placeholder="password" required> 
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"> <span>Remember me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openlogin()">Login</button>
+                    <a href="Password.html">Forgot password</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var card = document.getElementById("card");
+        function openregister()
+        {card.style.transform = "rotateY(-180deg)"};
+        function openlogin()
+        {card.style.transform = "rotateY(0deg)"};
+    </script>
+
+
+</body>
+</html>
