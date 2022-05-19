@@ -4,10 +4,6 @@ session_start();
 	include("connect.php");
 
 
-// Enable FULL Error Reporting on the screen
-// ONLY USE IN DEVELOPMENT
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 //Check server connection
 if ($con->connect_error){
@@ -19,7 +15,7 @@ if ($con->connect_error){
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-	//receive  values from task form
+
 
 	$tname=$_POST['tname'];
     $Aname=$_POST['Aname'];
@@ -40,7 +36,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-	//receive  values from task form
 
 	$tname=$_POST['tname'];
     $Aname=$_POST['Aname'];
